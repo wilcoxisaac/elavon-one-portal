@@ -1,0 +1,15 @@
+{
+  "name": "Elavon One Portal",
+  "short_name": "Elavon One",
+  "description": "Elavon One Portal – concept prototype with sample data.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#02025B",
+  "theme_color": "#02025B",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
