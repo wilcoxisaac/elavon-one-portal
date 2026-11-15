@@ -296,7 +296,7 @@ a.lrow{color:inherit}
 
 /* ===== Elavon modern theme (POS) + line-shield motion ===== */
 #app,.appg,#payov,#sheet{--r1:#FFBEB4;--b2:#C0E7FF;--b4:#1A92FF;--ez:cubic-bezier(.2,.8,.2,1);
- --shield:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='100 62 140 86'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='100' y1='148' x2='240' y2='62'%3E%3Cstop offset='0' stop-color='%23FFBEB4'/%3E%3Cstop offset='.3' stop-color='%23C0E7FF'/%3E%3Cstop offset='.75' stop-color='%231A92FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='2.2' stroke-linejoin='round'%3E%3Cpath d='M112,135V75H150L171.6,105L150,135Z'/%3E%3Cpath d='M228,135V75H190L168.4,105L190,135Z'/%3E%3C/g%3E%3C/svg%3E")}
+ --shield:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='86' viewBox='100 62 140 86'%3E%3Cdefs%3E%3ClinearGradient id='g' gradientUnits='userSpaceOnUse' x1='100' y1='148' x2='240' y2='62'%3E%3Cstop offset='0' stop-color='%23FFBEB4'/%3E%3Cstop offset='.3' stop-color='%23C0E7FF'/%3E%3Cstop offset='.75' stop-color='%231A92FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='2.2' stroke-linejoin='round'%3E%3Cpath d='M112,135V75H150L171.6,105L150,135Z'/%3E%3Cpath d='M228,135V75H190L168.4,105L190,135Z'/%3E%3C/g%3E%3C/svg%3E")}
 .appg{position:absolute;left:0;right:0;bottom:0;z-index:0;pointer-events:none;display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;grid-template-areas:"head" "body" "foot" "tabs";background:var(--bg);color:var(--tx);font-size:15px;overflow:hidden;
  --p:#02025B;--a:#005DED;--as:#E1F5FF;--bg:#F1F5FB;--tx:#111122;--mut:#63637F;--ln:#DCE0EB;--ok:#2E7F7E;--bad:#CF2A36;--onp:#fff}
 #app{z-index:1}
@@ -304,7 +304,6 @@ a.lrow{color:inherit}
 
 /* header: Elavon blue with the linear shield and a gradient hairline */
 [data-theme=elavon] .ahead{position:relative;background:#02025B;padding-bottom:14px;overflow:hidden}
-[data-theme=elavon] .ahead:before{content:"";position:absolute;right:-18px;top:-30%;bottom:-30%;width:150px;background:var(--shield) center/contain no-repeat;opacity:.28;pointer-events:none}
 [data-theme=elavon] .ahead>*{position:relative;z-index:1}
 [data-theme=elavon] .ahead:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--r1),var(--b2) 30%,var(--b4) 75%);transform-origin:left}
 [data-theme=elavon] .ahead h1{font-weight:600;letter-spacing:-.2px}
@@ -314,7 +313,9 @@ a.lrow{color:inherit}
 [data-theme=elavon] .card,[data-theme=elavon] .kp div,[data-theme=elavon] .qa button{border-radius:16px;border-color:#E3E7F0;box-shadow:0 1px 2px #02025B0a,0 6px 16px -10px #02025B26}
 [data-theme=elavon] .card h3{color:#02025B;letter-spacing:1.3px;font-weight:700;font-size:10.5px}
 [data-theme=elavon] .kp b,[data-theme=elavon] .big{font-weight:600;letter-spacing:-.5px}
-[data-theme=elavon] .hero2{background:#02025B var(--shield) no-repeat right -24px center/auto 170%;border-radius:18px;position:relative;overflow:hidden}
+[data-theme=elavon] .hero2{background:#02025B;border-radius:18px;position:relative;overflow:hidden;padding-bottom:18px}
+[data-theme=elavon] .hero2:before{content:"";position:absolute;right:14px;top:13px;width:62px;height:38px;background:var(--shield) center/contain no-repeat;opacity:.7;pointer-events:none}
+[data-theme=elavon] .hero2>*:first-child{padding-right:76px}
 [data-theme=elavon] .hero2:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:linear-gradient(90deg,var(--r1),var(--b2) 30%,var(--b4) 75%)}
 [data-theme=elavon] .lrow .li{border-radius:0;clip-path:polygon(0 0,70% 0,100% 50%,70% 100%,0 100%);width:42px;padding-right:8px;background:#E1F5FF;color:#005DED}
 [data-theme=elavon] .chip{border-color:#DCE0EB;padding:7px 15px;transition:background .2s,color .2s,border-color .2s}
@@ -381,7 +382,7 @@ a.lrow{color:inherit}
 #payov .pvh{background:transparent;padding-bottom:6px}
 #payov .pvh b{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;opacity:.92}
 #payov .hbtn{background:#ffffff1f}
-#payov .pvb{padding-bottom:44px}
+
 .sl{fill:none;stroke:url(#shg);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}
 .ck{fill:none;stroke:#1A92FF;stroke-width:4.4;stroke-linecap:round;stroke-linejoin:round}
 .pamt{position:relative;width:100%;max-width:330px;margin:2px auto 6px;flex:none}
@@ -417,7 +418,7 @@ a.lrow{color:inherit}
 .pok{width:100%;max-width:440px;height:auto;overflow:visible;flex:none}
 .pok text{fill:#fff;font-family:inherit}.pok .t1{fill:#D5DCFA}.pok .t2{font-weight:600;letter-spacing:-.5px}.pok .t3{fill:#1A92FF;font-size:9.5px;letter-spacing:.6px}.pok .t4{font-size:15px;font-weight:500}
 .pokm{display:flex;flex-direction:column;gap:3px;font-size:13.5px;color:#D5DCFA;margin-top:6px}.pokm b{font-weight:500;color:#fff}.pokm span{font-size:12px;color:#9FB0E6}
-.plogo{position:absolute;left:0;right:0;bottom:calc(12px + var(--safe,0px));display:flex;align-items:center;justify-content:center;gap:8px;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:#9FB0E6;pointer-events:none}
+.plogo{flex:none;padding:8px 0 calc(12px + var(--safe,0px));display:flex;align-items:center;justify-content:center;gap:8px;font-size:10.5px;letter-spacing:1.2px;text-transform:uppercase;color:#9FB0E6;pointer-events:none}
 .plogo img{height:18px;display:block}
 .pv.popen{animation:wipeF .5s var(--ez)}
 .pv.pin .pvh{animation:fin .3s ease-out}
@@ -427,7 +428,7 @@ a.lrow{color:inherit}
 .pv.pin .pamt .sl{stroke-dasharray:760;animation:pdraw .7s var(--ez) both}
 @keyframes pdraw{from{stroke-dashoffset:760}to{stroke-dashoffset:0}}
 @container scr (min-width:700px){#payov[data-theme=pay]{background:#02025Bd9}#payov .pv{border:1px solid #ffffff2e;box-shadow:0 30px 80px -20px #000a}.pok{max-width:420px}}
-@container scr (max-width:340px){.tile{min-height:104px;padding:9px 10px}.tile u{width:27px;height:27px}.pamt{max-width:250px}.plogo img{height:15px}#payov .pvb{padding-bottom:34px}}
+@container scr (max-width:340px){.tile{min-height:104px;padding:9px 10px}.tile u{width:27px;height:27px}.pamt{max-width:250px}.plogo img{height:15px}}
 @media (prefers-reduced-motion:reduce){#app,#app *,.appg,.pv,.pv *,.sh,.sh *{animation:none!important;transition:none!important}}
 
 .status.payon{background:#02025B!important;color:#fff!important}
